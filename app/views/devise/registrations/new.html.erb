@@ -37,7 +37,7 @@
                 <%= f.collection_radio_buttons :role_ids, Role.where.not(name: "admin"), :name, :name, {}, {:class=>"tick"} %>
             </div>
         </div><br>
-        <a href="#" class="forgot-pass-link mt-4">Forgot password?</a><br>
+        
         <div class="button">
         <%= f.submit "Sign up", :class=>" button1" %>
       </div><br>

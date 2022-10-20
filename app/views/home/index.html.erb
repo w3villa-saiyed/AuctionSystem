@@ -31,17 +31,25 @@
 
 
       <% if current_user.has_role? :admin %>
-    <a type="button" class="btn btn-outline-primary fw-500 rounded  user">
+    <a href="/admin/adminview" type="button" class="btn btn-outline-primary fw-500 rounded  user">
     <i class="fa fa-user"></i>
     <p class="d-none d-lg-inline">
      <%= current_user.roles[0].name.capitalize %></p><div class="vr space "></div>
       <%= current_user.name %>
    </a>
-   <% else %>
-   <a href="/users/sign_out" type="button" class="btn btn-outline-primary fw-500 rounded user">
+   <% end %>
+    <% if current_user.has_role? :bidder %>
+   <a href="" type="button" class="btn btn-outline-primary fw-500 rounded user">
       <i class="fa-solid fa-user me-lg-2"></i><p class="d-none d-lg-inline"><%= current_user.roles[0].name.capitalize %> | <%= current_user.name %></p>
     </a>
     <% end %>
+
+    <% if current_user.has_role? :seller %>
+   <a href="" type="button" class="btn btn-outline-primary fw-500 rounded user">
+      <i class="fa-solid fa-user me-lg-2"></i><p class="d-none d-lg-inline"><%= current_user.roles[0].name.capitalize %> | <%= current_user.name %></p>
+    </a>
+    <% end %>
+
 
     <% else %>
     <a href="/users/sign_up" type="button" class="btn btn-outline-primary fw-500 rounded">
