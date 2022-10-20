@@ -1,0 +1,51 @@
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<div class="container1 body">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+  <%= render "devise/shared/error_messages", resource: resource %>
+        <h2>Sign Up<span><i class="fa fa-linkedin-square" aria-hidden="true"></i></span></h2>
+        <div class="intro-text">
+            
+        </div>
+        <div class="inputs">
+            <div class="input1">
+                <%= f.label :name %><br />
+                <%= f.text_field :name, autofocus: true %>
+            </div>
+            <div class="input1">
+                <%= f.label :phone %><br />
+                <%= f.text_field :phone, autofocus: true, value:"+91" %>
+            </div>
+            <div class="input1">
+                <%= f.label :email %><br />
+                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
+            <div class="input1">
+                <%= f.label :password %>
+                <% if @minimum_password_length %>
+                
+                <% end %><br />
+                <%= f.password_field :password, autocomplete: "new-password" %>
+            </div>
+            <div class="input1">
+                <%= f.label :password_confirmation %><br />
+                <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+                
+            </div>
+             <div class="collection">
+                <%= f.collection_radio_buttons :role_ids, Role.where.not(name: "admin"), :name, :name, {}, {:class=>"tick"} %>
+            </div>
+        </div><br>
+        <a href="#" class="forgot-pass-link mt-4">Forgot password?</a><br>
+        <div class="button">
+        <%= f.submit "Sign up", :class=>" button1" %>
+      </div><br>
+        <p class="join-link">Already Have An Account? <a href="/users/sign_in">Sign in</a></p>
+        <% end %>
+    </div>
+<style type="text/css">
+    .collection label{
+        padding: 10px;
+    }
+</style>

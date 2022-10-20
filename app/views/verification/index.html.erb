@@ -1,0 +1,16 @@
+<div class="container1 body">
+ <%= form_with url: verification_create_path, method: :get do |f| %>
+        <h2>Sign In</h2>
+        
+        <div class="inputs">
+            <div class="input">
+                <%= f.label :phone %><br />
+                <%= f.text_field :phone, value:"+91", autofocus: true, autocomplete: "phone" %>
+            </div>
+        </div>
+        <div class="button">
+        <%= f.submit "continue", :class=>" button1" %>
+       </div>
+    </div>
+  <% end %>
+

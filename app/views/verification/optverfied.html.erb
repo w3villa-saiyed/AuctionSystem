@@ -1,0 +1,21 @@
+
+<div class="container1 body">
+ <%= form_with url: verification_match_path, method: :get do |f| %>
+    <p>Enter your 4 digit OTP send to  your mobile number</p>
+        <h2>Sign In</h2>
+        
+        <div class="inputs">
+            <div class="input">
+                <%= f.label :OTP %><br />
+                <%= f.text_field :otp,  autofocus: true, autocomplete: "phone" %>
+                <%= f.hidden_field :phone, :value =>params[:phone] %>
+            </div>
+        </div>
+        <div class="button">
+        <%= f.submit "continue", :class=>" button1" %>
+       </div>
+    </div>
+  <% end %>
+
+
+

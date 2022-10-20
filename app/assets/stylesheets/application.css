@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+*{
+  padding:0;
+  margin:0;
+  font-family: arial;
+  scroll-behavior:smooth;
+}
+
+/* footer link */
+.col-6 > a {
+  display:block;
+}
+
+
+
+
+.nav-item .nav-link{
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768.98px) {
+  #input-form{
+    width:35%;
+  }
+}
+
+
+
+
+/* responsive blog post. modify the width of image in each breakpoints */
+
+@media (min-width: 768px){
+  .bg {
+    width:350px;
+  }
+}
+
+@media (min-width: 992px){
+  .bg{
+    width:230px;
+    
+  }
+}
+@media (min-width: 1200px){
+  .bg{
+    width:250px;
+  }
+}
+
+@media (max-width: 768px){
+  .bg{
+    width:250px;
+  }
+}
+
+@media (max-width: 578px){
+  .bg{
+    width:100%;
+  }
+}
+.space{
+  margin-left: 10px;
+}
+.user{
+  margin: inherit;
+}
+.collection{
+  margin-top: 30px ;
+}
+.tick{
+  padding: 10px;
+  color: green;
+  background-color: green;
+  font-size: 30px;
+}
+/*/*/ 
+
