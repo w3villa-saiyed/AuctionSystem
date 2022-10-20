@@ -4,7 +4,7 @@ class AdminController < ApplicationController
 	end
 
 	def home
-		
+		redirect_to root_path
 	end
 
 

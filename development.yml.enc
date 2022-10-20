@@ -1,0 +1,4 @@
+twilio:
+	account_sid: "AC79b5addd7c4b1a4b535c73c7d4cb5e43"
+	auth_token: "18d1d5de346df846e2f7dd7eddb6a917"
+	phone_number: "+16614656362"
