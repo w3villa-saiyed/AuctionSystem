@@ -78,12 +78,18 @@
   .bg{
     width:100%;
   }
+  .user{
+        margin-left: 100px;
+    margin-top: 0px;
+  }
 }
 .space{
   margin-left: 10px;
 }
 .user{
-  margin: inherit;
+   margin-left: 100px;
+    margin-top: 0px;
+  
 }
 .collection{
   margin-top: 30px ;
@@ -96,3 +102,6 @@
 }
 /*/*/ 
 
+.area{
+  width: 70%;
+}

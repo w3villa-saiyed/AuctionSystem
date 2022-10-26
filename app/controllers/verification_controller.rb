@@ -15,7 +15,6 @@ class VerificationController < ApplicationController
 
     @user = User.find_by(phone: params[:phone])
     if @user.present?
-      binding.pry
       user_otp = params[:otp]
       send_otp =cookies[:otp] 
       cookies[:otp] = ""
