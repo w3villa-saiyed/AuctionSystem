@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :auth
   before_action :set_product, only: %i[ show edit update destroy ]
  
 
@@ -70,6 +71,17 @@ class ProductsController < ApplicationController
     def product_params
      
       params.require(:product).permit(:name, :model, :description, :cost, :image, :category_id)
+    end
+
+
+
+
+     def auth
+      if current_user&.has_role?('admin' || 'seller')
+      @categories = Category.all
+    elsif current_user&.has_role?('bidder')
+      redirect_to '/'
+    end
     end
 
   
