@@ -4,7 +4,13 @@ class HomeController < ApplicationController
 
   def index
     @categories = Category.all
-    @products = Product.all
+      category = params[:category]
+    if !category.nil?
+      @products = Product.where(:category_id => category)
+    else
+   @products = Product.all.reverse()
+  end
+    
     
   end
 

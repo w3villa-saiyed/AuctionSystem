@@ -486,7 +486,6 @@
         					<th scope="col">User Email</th>
         					<th scope="col">User Phone</th>
         					<th scope="col">Show</th>
-        					<th scope="col">Delete</th>
         				</tr>
         			</thead>
         			<tbody>
@@ -496,7 +495,6 @@
         					<td><%= user.email %></td>
         					<td><%= user.phone %></td>
         					<td><%= link_to 'Show', user %></td>
-        					<td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         				</tr>
         				<tr>
         					<% end %>

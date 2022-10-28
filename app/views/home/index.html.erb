@@ -39,7 +39,7 @@
        </a>
        <% end %>
        <% if current_user.has_role? :bidder %>
-       <a href="" type="button" class="btn btn-outline-primary fw-500 rounded user">
+       <a href="#" type="button" class="btn btn-outline-primary fw-500 rounded user">
         <i class="fa-solid fa-user me-lg-2"></i><p class="d-none d-lg-inline"><%= current_user.roles[0].name.capitalize %> | <%= current_user.name %></p>
       </a>
       <% end %>
@@ -87,13 +87,12 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/categories">Categories</a>
+            <a class="nav-link active" aria-current="page" href="/categories"><%= link_to "All Categories", root_path, :class=>"nav-link active" %></a>
           </li>
           <% @categories.each do |category| %>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <%= category.category %>
-              (<%= category.products.count %>)
+              <%= link_to category.category, root_path(:category=> category.id), :class=>"nav-link"  %>
             </a>
           </li>
           <% end %>
